@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { AlertTriangle, Zap, Mail } from 'lucide-react';
+import { AlertTriangle, Globe, BookOpen, ExternalLink } from 'lucide-react';
 
 export default function UnderConstructionPage() {
   const [progress, setProgress] = React.useState(13);
@@ -20,12 +20,11 @@ export default function UnderConstructionPage() {
     <div className="relative min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden bg-background">
       {/* Background Image */}
       <Image
-        src="https://placehold.co/1920x1080.png"
-        alt="MAX Background"
+        src="https://bing.img.run/uhd.php"
+        alt="Bing每日壁纸UHD超高清原图"
         fill
         objectFit="cover"
         className="absolute inset-0 z-0 filter blur-sm opacity-30"
-        data-ai-hint="futuristic abstract"
         priority
       />
 
@@ -62,28 +61,44 @@ export default function UnderConstructionPage() {
         <section className="w-full pt-8">
           <Card className="bg-card/90 backdrop-blur-lg shadow-xl w-full border-border hover:shadow-accent/20 transition-shadow duration-300">
             <CardHeader>
-              <CardTitle className="font-headline text-2xl sm:text-3xl">特别推广 (Promotional Area)</CardTitle>
+              <CardTitle className="font-headline text-2xl sm:text-3xl">已部署项目 (Deployed Projects)</CardTitle>
             </CardHeader>
             <CardContent className="px-4 sm:px-6 pb-6">
               <p className="mb-6">
-                在此处放置您的促销内容。敬请期待我们的盛大发布！
+                虽然这个页面还在建设中，但我们已经有一些精彩的项目上线了！
                 <br/>
-                Place your promotional content here. Stay tuned for our grand launch!
+                While this page is under construction, we already have some exciting projects live!
               </p>
               <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-secondary p-6 rounded-lg text-left shadow-md hover:shadow-lg transition-shadow duration-300 text-secondary-foreground">
                   <div className="flex items-center mb-3">
-                    <Zap className="w-8 h-8 text-accent mr-3" />
-                    <h3 className="font-headline font-semibold text-xl">新功能预告</h3>
+                    <BookOpen className="w-8 h-8 text-accent mr-3" />
+                    <h3 className="font-headline font-semibold text-xl">博客站点</h3>
                   </div>
-                  <p className="text-sm opacity-80">了解即将推出的令人兴奋的新功能，旨在提升您的体验。</p>
+                  <p className="text-sm opacity-80 mb-3">基于Typecho构建的个人博客，分享技术文章和生活感悟。</p>
+                  <a 
+                    href="https://blogtypecho.maxtrnn.top" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-accent hover:text-accent/80 text-sm font-medium"
+                  >
+                    访问博客 <ExternalLink className="w-4 h-4 ml-1" />
+                  </a>
                 </div>
                 <div className="bg-secondary p-6 rounded-lg text-left shadow-md hover:shadow-lg transition-shadow duration-300 text-secondary-foreground">
                   <div className="flex items-center mb-3">
-                    <Mail className="w-8 h-8 text-accent mr-3" />
-                    <h3 className="font-headline font-semibold text-xl">订阅更新</h3>
+                    <Globe className="w-8 h-8 text-accent mr-3" />
+                    <h3 className="font-headline font-semibold text-xl">导航之家</h3>
                   </div>
-                  <p className="text-sm opacity-80">注册以获取最新消息、独家优惠和发布通知。</p>
+                  <p className="text-sm opacity-80 mb-3">精心整理的网站导航页面，收录各类优质网站和在线工具。</p>
+                  <a 
+                    href="https://home.maxtrnn.top" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-accent hover:text-accent/80 text-sm font-medium"
+                  >
+                    访问导航 <ExternalLink className="w-4 h-4 ml-1" />
+                  </a>
                 </div>
               </div>
             </CardContent>
