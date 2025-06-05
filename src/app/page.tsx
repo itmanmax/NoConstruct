@@ -26,6 +26,7 @@ export default function UnderConstructionPage() {
         objectFit="cover"
         className="absolute inset-0 z-0 filter blur-sm opacity-30"
         priority
+        unoptimized
       />
 
       {/* Content */}
